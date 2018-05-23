@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Add Item</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-item>
+    <ion-label>Nome</ion-label>
+    <ion-input [(ngModel)]="item.nome" placeholder="Jones"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Telefone</ion-label>
+    <ion-input [(ngModel)]="item.telefone" placeholder="(85) 98855-8822"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Altura</ion-label>
+    <ion-input [(ngModel)]="item.altura" placeholder="1.70"></ion-input>
+  </ion-item>
+
+  {{item | json }}
+  <button ion-button block clear (click)="addItem(item)">Add</button>
+</ion-content>
